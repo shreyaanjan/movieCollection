@@ -1,6 +1,7 @@
 const express = require("express")
 const connectDb = require("./config/db.js")
 const adminRouter = require("./routes/adminRoutes.js")
+const clientRouter = require("./routes/clientRoutes.js")
 
 const app = express()
 const PORT = 8000
@@ -13,6 +14,7 @@ app.use('/uploads', express.static('uploads'))
 connectDb()
 
 app.use('/admin', adminRouter)
+app.use('/', clientRouter)
 
 app.listen(PORT, (err) => {
     console.log(`Server is running at http://localhost:${PORT}`);

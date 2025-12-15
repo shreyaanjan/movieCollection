@@ -1,5 +1,5 @@
 const express = require('express')
-const { allMovie, addMovie, getMovieForm, deleteMovie, editMovie, updateMovie } = require('../controller/movieController.js')
+const { allMovie, getMovieForm, addMovie, deleteMovie, editMovie, updateMovie } = require('../controller/adminController.js')
 const upload = require('../middlewares/multer.js')
 const router = express.Router()
 

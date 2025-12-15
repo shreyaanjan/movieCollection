@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="/assets2/css/bootstrap.min.css">
+    <link href="/assets2/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="border border-bottom">
+        <div class="nav-links">
+            <a href="/">HOME</a>
+            <a href="/">PAGES</a>
+            <a href="/">PORTFOLIO</a>
+        </div>
+        <div class="logo strong">
+            <img src="/assets2/images/home-2-logo-sticky-img.png" alt="logo" width="150px">
+        </div>
+        <div class="nav-links">
+            <a href="/">BLOG</a>
+            <a href="/">SHOP</a>
+            <a href="/admin">Admin</a>
+        </div>
+    </header>
+    <section class="gallery">
+        <div class="poster">
+            <img src="/assets2/images/movie-1.jpg" alt="CALL ME AO" />
+            <div class="poster-title">
+                <h3>CALL ME AO</h3>
+                <span>DRAMA</span>
+            </div>
+        </div>
+        <div class="poster">
+            <img src="/assets2/images/movie-2.jpg" alt="BIG BAD RED" />
+            <div class="poster-title">
+                <h3>BIG BAD RED</h3>
+                <span>THRILLER</span>
+            </div>
+        </div>
+        <div class="poster">
+            <img src="/assets2/images/movie-3.jpg" alt="Call Me As" />
+            <div class="poster-title">
+                <h3>HUECO MUNDO</h3>
+                <span>ART FILM</span>
+            </div>
+        </div>
+        <div class="poster">
+            <img src="/assets2/images/movie-4.jpg" alt="Hueco" />
+            <div class="poster-title">
+                <h3>MOSTRO ATOM</h3>
+                <span>DOCUMENTARY</span>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <% movies.map((movie)=> { %>
+            <div class="poster">
+                <img src="<%= movie.file %>" alt="movieCover" />
+                <div class="poster-title">
+                    <h3 class="text-uppercase">
+                        <%= movie.name %>
+                    </h3>
+                    <span>
+                        <%= movie.genre %>
+                    </span>
+                </div>
+            </div>
+        <% }) %>
+    </section>
+</body>
+
+</html>
