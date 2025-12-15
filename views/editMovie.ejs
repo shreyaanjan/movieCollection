@@ -1,0 +1,72 @@
+<%- include('./partials/start.ejs') %>
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Edit Movie</h4>
+                            <form action="/admin/edit-movie/<%= editMov._id %>" method="post"
+                                enctype="multipart/form-data" class="forms-sample">
+                                <div class="form-group">
+                                    <label for="name">Movie Name</label>
+                                    <input type="text" value="<%= editMov.name %>" class="form-control" id="name"
+                                        name="name" placeholder="Eg: Zindagi Na Milegi Dobara">
+                                </div>
+                                <div class="form-group">
+                                    <label for="genre">Genre</label>
+                                    <select class="form-control" id="genre" name="genre">
+                                        <option selected>Select Genre</option>
+                                        <option <%=editMov.genre=="Action" ? "selected" : "" %> value="Action">Action
+                                        </option>
+                                        <option <%=editMov.genre=="Adventure" ? "selected" : "" %>
+                                            value="Adventure">Adventure</option>
+                                        <option <%=editMov.genre=="Comedy" ? "selected" : "" %> value="Comedy">Comedy
+                                        </option>
+                                        <option <%=editMov.genre=="Crime-Mystery" ? "selected" : "" %>
+                                            value="Crime-Mystery">Crime & Mystery</option>
+                                        <option <%=editMov.genre=="Drama" ? "selected" : "" %> value="Drama">Drama
+                                        </option>
+                                        <option <%=editMov.genre=="Horror" ? "selected" : "" %> value="Horror">Horror
+                                        </option>
+                                        <option <%=editMov.genre=="Romance" ? "selected" : "" %> value="Romance">Romance
+                                        </option>
+                                        <option <%=editMov.genre=="Sci-Fi" ? "selected" : "" %> value="Sci-Fi">Science
+                                            Fiction (Sci-Fi)</option>
+                                        <option <%=editMov.genre=="Thriller-Suspense" ? "selected" : "" %>
+                                            value="Thriller-Suspense">Thriller & Suspense</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="file">Movie Cover</label>
+                                    <input type="file" id="file" name="file" class="form-control" accept="image/*">
+                                    <img src="/<%= editMov.file %>" alt="<%= editMov.name %>" width="100px">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Release Date</label>
+                                    <input type="date" value="<%= editMov.date %>" class="form-control" name="date" id="date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating">Rating</label>
+                                    <select class="form-control" id="rating" name="rating">
+                                        <option selected>Select Rating</option>
+                                        <option <%= editMov.rating == "1" ? "selected" : "" %> value="1">1</option>
+                                        <option <%= editMov.rating == "2" ? "selected" : "" %> value="2">2</option>
+                                        <option <%= editMov.rating == "3" ? "selected" : "" %> value="3">3</option>
+                                        <option <%= editMov.rating == "4" ? "selected" : "" %> value="4">4</option>
+                                        <option <%= editMov.rating == "5" ? "selected" : "" %> value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="desc">Description</label>
+                                    <textarea class="form-control" name="desc" id="desc" rows="10"><%= editMov.desc %></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/end.ejs') %>

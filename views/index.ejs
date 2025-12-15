@@ -35,7 +35,9 @@
                         <td><%= movie.genre %></td>
                         <td><img src="/<%= movie.file %>" alt="<%= movie.name %>"></td>
                         <td><%= movie.date %></td>
-                        <td><%= movie.rating %></td>
+                        <td class="font-weight-medium">
+                          <span class="badge badge-warning text-white"><%= movie.rating %></span>
+                        </td>
                         <td><%= movie.desc %></td>
                         <td class="font-weight-medium">
                           <a href="/admin/edit-movie/<%= movie._id %>" class="badge badge-success">Edit</a>
