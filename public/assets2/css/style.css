@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
     margin: 0;
@@ -94,11 +95,9 @@ header {
     bottom: 0;
     width: 100%;
     height: 35%;
-    background: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(to top,
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0));
     pointer-events: none;
     z-index: 1;
 }
@@ -149,7 +148,6 @@ header {
     }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -170,3 +168,74 @@ header {
         height: 300px;
     }
 }
+
+.movie-detail {
+    display: flex;
+    gap: 40px;
+    padding: 50px 80px;
+    color: #111827;
+    /* default dark text */
+}
+
+.movie-left img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-right {
+    max-width: 700px;
+}
+
+.movie-right h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #000;
+    font-family: "Playfair Display", serif !important;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* Rating stays highlighted */
+.rating {
+    font-family: "Playfair Display", serif !important;
+    font-weight: bold;
+    color: #f59e0b;
+    /* amber */
+}
+
+/* Genre & Release Date */
+.genre,
+.date {
+    font-family: "Playfair Display", serif !important;
+    color: #374151;
+    /* dark gray */
+}
+
+.label{
+    font-family: "Playfair Display", serif !important;
+    color: black;
+    font-weight: 500;
+}
+
+/* Description text */
+.movie-desc {
+    font-family: "Playfair Display", serif !important;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4b5563;
+    /* readable gray */
+}
+
+/* .movie-info span {
+    background: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 6px;
+} */

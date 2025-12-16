@@ -11,6 +11,18 @@ const clientPage = async (req, res) => {
     }
 }
 
+const descPage = async (req, res) => {
+    try {
+        const { id } = req.params
+        const movies = await Movie.findById(id)
+        return res.render('desc', {
+            movies
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 module.exports = {
-    clientPage
+    clientPage, descPage
 }

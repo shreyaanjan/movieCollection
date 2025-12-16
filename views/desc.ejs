@@ -1,0 +1,29 @@
+<%- include('./partials/cStart.ejs') %>
+    <section class="movie-detail">
+        <div class="movie-left">
+            <img src="/<%= movies.file %>" alt="<%= movies.name %>">
+        </div>
+
+        <div class="movie-right">
+            <h1>
+                <%= movies.name %>
+            </h1>
+
+            <div class="movie-info">
+                <span class="rating">⭐ <%= movies.rating %></span>
+                <div class="genre">
+                    <span class="label text-uppercase">Genre :</span>
+                    <%= movies.genre %>
+                </div>
+                <div class="date">
+                    <span class="label text-uppercase">Release Date :</span>
+                    <%= movies.date %>
+                </div>
+            </div>
+
+            <p class="movie-desc">
+                <%= movies.desc %>
+            </p>
+        </div>
+    </section>
+    <%- include('./partials/cEnd.ejs') %>
