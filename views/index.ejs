@@ -38,13 +38,15 @@
                         <td class="font-weight-medium">
                           <span class="badge badge-warning text-white"><%= movie.rating %></span>
                         </td>
-                        <td><%= movie.desc %></td>
+                        <td>
+                          <a href="/admin/description/<%= movie._id %>">View</a>
+                        </td>
                         <td class="font-weight-medium">
                           <a href="/admin/edit-movie/<%= movie._id %>" class="badge badge-success">Edit</a>
                           <a href="/admin/delete-movie/<%= movie._id %>" class="badge badge-danger">Delete</a>
                         </td>
                       </tr>
-                      <% }) %>
+                    <% }) %>
                   </tbody>
                 </table>
               </div>

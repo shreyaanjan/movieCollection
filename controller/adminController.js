@@ -89,6 +89,18 @@ const updateMovie = async (req, res) => {
     }
 }
 
+const description = async (req, res) => {
+    try {
+        const { id } = req.params
+        const movies = await Movie.findById(id)
+        return res.render('description', {
+            movies
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 module.exports = {
-    allMovie, getMovieForm, addMovie, deleteMovie, editMovie, updateMovie
+    allMovie, getMovieForm, addMovie, deleteMovie, editMovie, updateMovie, description
 }
