@@ -5,8 +5,12 @@
       <div class="row">
         <div class="col-md-12">
           <div class="row">
-            <div class="col-12 col-xl-8 mb-2 mb-xl-0">
-              <h3 class="font-weight-bold">Movie Collection</h3>
+            <div class="col-12 d-flex justify-content-between align-items-center mb-2">
+              <h3 class="font-weight-bold mb-0">Movie Collection</h3>
+              <a href="/" class="btn client-btn d-flex align-items-center gap-2">
+                <i class="mdi mdi-view-grid"></i>
+                Client Side
+              </a>
             </div>
           </div>
         </div>
@@ -31,12 +35,20 @@
                   <tbody>
                     <% movies.map((movie)=> { %>
                       <tr>
-                        <td><%= movie.name %></td>
-                        <td><%= movie.genre %></td>
+                        <td>
+                          <%= movie.name %>
+                        </td>
+                        <td>
+                          <%= movie.genre %>
+                        </td>
                         <td><img src="/<%= movie.file %>" alt="<%= movie.name %>"></td>
-                        <td><%= movie.date %></td>
+                        <td>
+                          <%= movie.date %>
+                        </td>
                         <td class="font-weight-medium">
-                          <span class="badge badge-warning text-white"><%= movie.rating %></span>
+                          <span class="badge badge-warning text-white">
+                            <%= movie.rating %>
+                          </span>
                         </td>
                         <td>
                           <a href="/admin/description/<%= movie._id %>">View</a>
@@ -46,7 +58,7 @@
                           <a href="/admin/delete-movie/<%= movie._id %>" class="badge badge-danger">Delete</a>
                         </td>
                       </tr>
-                    <% }) %>
+                      <% }) %>
                   </tbody>
                 </table>
               </div>

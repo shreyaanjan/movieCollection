@@ -36249,3 +36249,17 @@ div.tagsinput span.tag a {
 .desc{
   background: #F5F7FF;
 }
+
+.client-btn {
+  background-color: #4b49ac;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.client-btn:hover {
+  background-color: #3f3da1;
+  color: #fff;
+}
