@@ -10,18 +10,46 @@
 </head>
 
 <body>
-    <header class="border border-bottom">
-        <div class="nav-links">
-            <a href="/">HOME</a>
-            <a href="/">PAGES</a>
-            <a href="/">PORTFOLIO</a>
-        </div>
-        <div class="logo strong">
-            <img src="/assets2/images/home-2-logo-sticky-img.png" alt="logo" width="150px">
-        </div>
-        <div class="nav-links">
-            <a href="/">BLOG</a>
-            <a href="/">SHOP</a>
-            <a href="/admin">Admin</a>
+    <header class="border border-bottom p-5">
+        <div class="container position-relative d-flex align-items-center">
+
+            <!-- Mobile menu button (left) -->
+            <button class="btn d-lg-none me-auto" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                ☰
+            </button>
+
+            <!-- Left nav (desktop only) -->
+            <div class="nav-links d-none d-lg-flex me-auto">
+                <a href="/">HOME</a>
+                <a href="/">PAGES</a>
+                <a href="/">PORTFOLIO</a>
+            </div>
+
+            <!-- Center logo -->
+            <div class="logo strong position-absolute start-50 translate-middle-x">
+                <img src="/assets2/images/home-2-logo-sticky-img.png" alt="logo" width="150px">
+            </div>
+
+            <!-- Right nav (desktop only) -->
+            <div class="nav-links d-none d-lg-flex ms-auto">
+                <a href="/">BLOG</a>
+                <a href="/">SHOP</a>
+                <a href="/admin">Admin</a>
+            </div>
+
         </div>
     </header>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fs-3">MENU</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="d-block mb-3" href="/">HOME</a>
+            <a class="d-block mb-3" href="/">PAGES</a>
+            <a class="d-block mb-3" href="/">PORTFOLIO</a>
+            <a class="d-block mb-3" href="/">BLOG</a>
+            <a class="d-block mb-3" href="/">SHOP</a>
+            <a class="d-block" href="/admin">ADMIN</a>
+        </div>
+    </div>

@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
+    text-decoration: none;
+    outline: none;
 }
 
 body {
@@ -174,7 +176,6 @@ header {
     gap: 40px;
     padding: 50px 80px;
     color: #111827;
-    /* default dark text */
 }
 
 .movie-left img {
@@ -203,39 +204,35 @@ header {
     font-size: 17px;
 }
 
-/* Rating stays highlighted */
 .rating {
     font-family: "Playfair Display", serif !important;
     font-weight: bold;
     color: #f59e0b;
-    /* amber */
 }
 
-/* Genre & Release Date */
 .genre,
 .date {
     font-family: "Playfair Display", serif !important;
     color: #374151;
-    /* dark gray */
 }
 
-.label{
+.label {
     font-family: "Playfair Display", serif !important;
     color: black;
     font-weight: 500;
 }
 
-/* Description text */
 .movie-desc {
     font-family: "Playfair Display", serif !important;
     font-size: 16px;
     line-height: 1.8;
     color: #4b5563;
-    /* readable gray */
 }
 
-/* .movie-info span {
-    background: #f3f4f6;
-    padding: 4px 10px;
-    border-radius: 6px;
-} */
+.offcanvas-body a, h5 {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1px;
+}
