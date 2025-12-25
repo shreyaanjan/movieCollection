@@ -24,6 +24,12 @@ const getMovieForm = (req, res) => {
 const addMovie = async (req, res) => {
     try {
         const data = req.body;
+        if (!data.name || !data.genre || !data.rating || !data.desc) {
+            return res.send("All fields are required.");
+        }
+        if (!req.file) {
+            return res.send("Movie cover is required.");
+        }
         const doc = req.file.path;
         const movie = {
             ...data, file: doc
@@ -71,6 +77,10 @@ const updateMovie = async (req, res) => {
         const { id } = req.params
         const movie = await Movie.findById(id)
         const updatedData = req.body
+
+        if (!updatedData.name || !updatedData.genre || !updatedData.rating || !updatedData.desc) {
+            return res.send("All fields are required.");
+        }
 
         if (req.file) {
             const oldImgPath = path.join(__dirname, "..", movie.file)

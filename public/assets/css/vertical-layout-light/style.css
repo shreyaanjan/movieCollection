@@ -36246,7 +36246,7 @@ div.tagsinput span.tag a {
   color: #4b5563;
 }
 
-.desc{
+.desc {
   background: #F5F7FF;
 }
 
@@ -36262,4 +36262,50 @@ div.tagsinput span.tag a {
 .client-btn:hover {
   background-color: #3f3da1;
   color: #fff;
+}
+
+/* Make select look exactly like input */
+select.form-control {
+  height: 45px;
+  padding: 10px 12px;
+  /* FIX vertical alignment */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  /* IMPORTANT */
+  border-radius: 0.25rem;
+  color: #495057;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Universal input consistency */
+.form-control {
+  height: 45px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #495057;
+}
+
+/* Input placeholder color */
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Select placeholder (Select Genre / Select Rating) */
+select.form-control option[disabled] {
+  color: #9ca3af;
+}
+
+/* Fix date input text position */
+input[type="date"].form-control {
+  padding-right: 40px;
+}
+
+/* Optional: smoother focus */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #4f46e5;
 }
